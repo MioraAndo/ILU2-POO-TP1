@@ -115,7 +115,7 @@ public class Village {
 
 	public String afficherVillageois() throws VillageSansChefException{
 		if(chef==null) {
-			throw new VillageSansChefException();
+			throw new VillageSansChefException("pas de chef");
 		}
 		StringBuilder chaine = new StringBuilder();
 		if (nbVillageois < 1) {

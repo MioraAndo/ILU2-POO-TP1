@@ -1,14 +1,16 @@
 package histoire;
 
 import personnages.Chef;
+
 import personnages.Druide;
 import personnages.Gaulois;
 import villagegaulois.Etal;
 import villagegaulois.Village;
+import villagegaulois.VillageSansChefException;
 
 public class Scenario {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws VillageSansChefException {
 		Village village = new Village("le village des irréductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
@@ -25,6 +27,7 @@ public class Scenario {
 		village.ajouterHabitant(druide);
 		village.ajouterHabitant(abraracourcix);
 		village.afficherVillageois();
+		
 
 		System.out.println(village.rechercherVendeursProduit("fleurs"));
 		System.out.println(village.installerVendeur(bonemine, "fleurs", 20));
