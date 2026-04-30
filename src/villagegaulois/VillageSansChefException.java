@@ -19,4 +19,7 @@ public class VillageSansChefException extends Exception {
 		super(message,cause);
 	}
 	
+	
+	
 }
+
